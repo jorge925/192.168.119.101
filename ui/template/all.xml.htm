@@ -1,0 +1,1672 @@
+<html><head><meta http-equiv=Content-Type content='text/html; charset=utf-8'></head>
+<?xml version="1.0" encoding="utf-8"?>
+<htmlfragments>
+  <about-us><![CDATA[<div class="window about_us">
+    <table class="window-wrapper">
+        <tbody>
+            <tr class="window-titlebar">
+                <td class="window-title-l">
+                    &nbsp;
+                </td>
+                <td class="window-title-c">
+                    <table class="width100p">
+                        <tr>
+                            <td>
+                                <div style="float: left;">
+                                    <span class="window-title">About AirDroid</span>
+                                </div>
+                            </td>
+                            <td style="width:64px;">
+                                <div class="window-x">
+                                </div>
+                            </td>
+                        </tr>                        
+                    </table>
+
+
+                </td>
+                <td class="window-title-r">
+                    &nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td class="window-body-l">
+                </td>
+                <td class="window-body-c" valign="top">
+                    <div class="logo_wraper">
+                        
+                    </div>
+                    <div class="right_wraper">
+                        <div class="version_wraper">
+                           <span class="version"> AirDroid <a>1.0</a> </span>
+                           <a class="btn_blue62">Update</a>
+                        </div>
+                         <div class="slog">
+                            Enjoy your Android experience Over-The-Air.
+                        </div>
+                         <div class="website">
+                            Website:<a class="site"> www.airdroid.com</a>
+                        </div>
+                         <div class="copyright">Copyright © 2011 Sand Studio, All Rights Reserved</div>
+                    </div>
+                </td>
+                <td class="window-body-r window-resize-e ui-resizable-handle ui-resizable-e">
+                </td>
+            </tr>
+            <tr class="window-bottom">
+                <td class="window-bottom-l">
+                    &nbsp;
+                </td>
+                <td class="window-bottom-c window-resize-s ui-resizable-handle ui-resizable-s">
+                    &nbsp;
+                </td>
+                <td class="window-bottom-r window-resize-se ui-resizable-handle ui-resizable-se">
+                    &nbsp;
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>]]></about-us>
+  <applications-install-item><![CDATA[<div uploadid="<%=uploadID %>" class="app_list_item">
+    <p class="checkbox" style="display: none;">
+        <input type="checkbox" value=""></p>
+    <div class="app_list_item_col_name">
+        <img class="app_list_item_icon" src="ui/theme/default/images/app-icon-default.png" tppabs="http://192.168.119.101:8888/ui/template/ui/theme/default/images/app-icon-default.png"
+            width="50px" height="50px">
+        <p class="app_list_item_name">
+            <%=fileName %></p>
+        <p class="app_list_item_version">
+        </p>
+    </div>
+    <div class="app_list_item_col_size">
+    </div>
+    <div class="app_list_item_col_date" style="margin-left:-15px;">
+        <div class="upload_progress">
+            <div class="upload_progress_ing">
+            </div>
+            <div class="upload_progress_v">
+            </div>
+            <div class="upload_speed">
+            </div>
+        </div>
+    </div>
+    <div class="app_list_item_col_command" style="text-align: center;">
+        <div class="app_list_item_command_line">
+            <a class="app-stop-upload" href="#"><%=UsedLang._plain_text_cancel %></a></div>
+    </div>
+    <div style="display: none;" id="app_list_item_permission">
+    </div>
+</div>
+]]></applications-install-item>
+  <applications-item><![CDATA[<% _.each(list,function(item){ %>
+<div sid="<%=item.id %>" class="app_list_item">
+     <p class="checkbox"><input type="checkbox" value="<%=item.id %>"></p>
+     <div class="app_list_item_col_name">
+        <img class="app_list_item_icon" src="ui/theme/default/images/app-icon-default.png" tppabs="http://192.168.119.101:8888/ui/template/ui/theme/default/images/app-icon-default.png" width="50px" height="50px">
+        <p class="app_list_item_name"></p>
+        <p class="app_list_item_version" style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;-o-text-overflow: ellipsis; -ms-text-overflow: ellipsis;  "></p>
+     </div>
+     <div class="app_list_item_col_size"></div>
+     <div class="app_list_item_col_date"></div>
+     <div class="app_list_item_col_command" style="text-align: center;"><div class="app_list_item_command_line" style="float:right;"><a class="app-backup" href="#"><%=UsedLang._button_text_export_app %></a><a class="app-uninstall" href="#"><%=UsedLang._button_text_uninstall_app %></a></div></div>
+     <div style="display:none;" id="app_list_item_permission"></div>
+     <div style="display:none;" class="app_list_item_vcode"></div>
+</div>
+<% }); %>]]></applications-item>
+  <applications><![CDATA[<div id="app_list">
+  <div class="app_list_top">
+    <div class="app_list_top_c">
+        <div class="application-tab-l-patch"></div>
+        <div class="application-tab-r-patch"></div>
+        <div class="tabs">
+            <div class="tab_current"><div class="tab_l"></div><div class="tab_r"></div><div class="tab_c installed_apps"><%=UsedLang._tab_text_installed_app %></div></div>
+            <div class="tab"><div class="tab_l"></div><div class="tab_r"></div><div class="tab_c system_apps"><%=UsedLang._tab_text_system_app %></div></div>
+            <div class="tab tab_more_apps hide"><div class="tab_l"></div><div class="tab_r"></div><div class="tab_c more_apps"><%=UsedLang._tab_text_more_app %></div></div>
+        </div>
+      <div class="search26">
+            <div class="search26_left" />
+          <input type="text" id="app_search_input" value="">
+          <div class="search26_r" style="cursor:pointer;"></div>
+          <div class="search26_right" />
+      </div>      
+      <div class="command">
+        <a class="btn_blue90_install_fake app-install" href="#"><span id="app_install_btn"><%=UsedLang._button_text_install_app %></span></a>
+        <div class="abtn_wrap">
+            <a class="abtn app-backup-selected abtn_right btn-state-disabled" style="margin-left:-1px;"><%=UsedLang._button_text_export_app%></a>
+            <a class="abtn app-uninstall-selected abtn_left btn-state-disabled" style="margin-left:-1px;"><%=UsedLang._button_text_uninstall_app %></a>
+        </div>
+       
+        <div class="btn_white65" id="app_refresh"><%=UsedLang._button_text_refresh %></div>
+      </div>
+      <div class="app-unknown-source-tip hide">      
+        <span class="app-unknown-source-tip-text"><%=UsedLang._button_app_unknown_source_tip_text %></span>
+        <button class="app-unknown-source-guide-close"></button>
+        <a class="app-unknown-source-guide"><%=UsedLang._button_app_unknown_source_guide %></a>        
+      </div>      
+      <div class="all-calllog-titlebar-r-patcher" style="top:40px;"></div>
+      <div class="all-calllog-titlebar-l-patcher" style="top:40px;"></div>
+      <div class="title_row">
+      <p class="checkbox app-select-all" title="Select All"><input type="checkbox" name="mlcb" id="mlcb_all" class="checkbox_all"></p>
+        <div class="title_col_name"><a href="#" sortType="1"><%=UsedLang._col_text_name %></a></div>
+        <div class="title_col_size"><a href="#" sortType="2"><%=UsedLang._col_text_size %></a></div>
+        <div class="title_col_date"><a href="#" sortType="3"><%=UsedLang._col_text_date %></a></div>
+      </div>
+    </div>
+  </div>
+  <div id="more_app_container" style="display:none">
+    <iframe style="width: 99%;height:100%;border:0;display: block;margin: 0 auto;" id="more_app_iframe"></iframe>
+  </div>
+  <div class="app_list_container" style="overflow: hidden;position:absolute;top:72px;z-index:1;">
+    <div class="app_list_container_c">
+        <div id="app_list_view">
+            <div id="app_list_view_processing"></div>
+            <div id="app_list_view_user"></div>
+            <div id="app_list_view_system"></div>
+        </div>
+    </div>
+  </div>
+</div>
+<div id="app_info" style="display:none;">
+  <div class="app_info_top">
+    <div class="app_info_top_c">
+      <p class="app_info_title"></p>
+      <p class="app_info_icon"><img width="72px"></p>
+    </div>
+  </div>
+  <div class="app_info_container">
+    <div class="app_info_container_c">
+          <div class="app_info_item"><p class="app_info_item_title">Version</p><p class="app_info_item_val" id="app_info_item_version"></p></div>
+          <div class="app_info_item"><p class="app_info_item_title">Size</p><p class="app_info_item_val" id="app_info_item_size"></p></div>
+          <div class="app_info_item"><p class="app_info_item_title">Permissions</p><div class="app_info_item_val2" id="app_info_item_permissions" style="width:100%;display:block;height:260px;overflow:auto;border:solid 1px #E7EAEE;"></div></div>
+    </div>
+  </div>
+  <div class="app_info_bottom">
+    <div class="app_info_bottom_c">
+      <a class="share_facebook" href="#"></a>
+      <div class="command">
+        <a class="btn_white75" id="app_info_uninstall" href="#">Uninstall</a>
+        <a class="btn_white65" id="app_info_backup" href="#">Export</a>
+      </div>
+    </div>
+  </div>
+</div>]]></applications>
+  <appmarket><![CDATA[<div id="webbrowser" style="top:0">
+    <div class="webbrowser_top_c">
+      <a class="btn_back" href="javascript:parent.document.getElementById('webbrowser_frame').contentWindow.history.go(-1); "></a>
+      <a class="btn_go" href="javascript:parent.document.getElementById('webbrowser_frame').contentWindow.history.go(1); "></a>
+      <a class="tab_history" href="#"></a>
+      <a class="tab_fav" href="#"></a>
+      <div class="tabs">
+        <div class="tab_current"><div class="tab_l"></div><div class="tab_r"></div><div class="tab_c">iTong Market</div></div>
+      </div>
+    </div>
+  <div class="webbrowser_container">
+    <div class="webbrowser_container_c">
+      <iframe id="webbrowser_frame" src="" frameborder="no" height="100%" width="100%" border="0" marginwidth="0" marginheight="0" scrolling="auto" allowtransparency="yes"></iframe>
+    </div>
+  </div>
+</div>]]></appmarket>
+  <browser><![CDATA[<div class="webbrowser_bar">
+  <a class="btn_back" menu="back" title="<%=usedLang._title_back %>"></a>
+  <a class="btn_go" menu="go" title="<%=usedLang._title_forward %>"></a>
+  <a class="btn_refresh" menu="refresh" title="<%=usedLang._title_refresh %>"></a>
+  <div class="search26 webbrowser_input">
+      <div class="search26_left" />
+      <input type="text" id="webbrowser_url_input" value=""/>
+      <a class="btn_forward" menu="forward"></a>
+      <div class="search26_right" />
+  </div>
+</div>
+
+<div class="webbrowser_tabs">
+  <div class="tabs">
+    <div class="tabs_container">
+    
+    </div>
+  </div>
+  <div class="tabs_actions">
+        <a class="btn_addTab" menu="add_tab" title="<%=usedLang._title_add_tab %>"></a>
+        <a class="btn_listTabs" menu="list_tabs" title="<%=usedLang._title_list_all_tabs %>"></a>
+        <div id="webbrowser_tab_list" class="tabs_list_wrap">
+             <div class="tabs_list_wrap_top"><p class="tabs_list_wrap_arrow"></p></div>
+             <div class="tabs_list_wrap_container">
+                
+             </div>
+             <div class="tabs_list_wrap_bottom"></div>
+          </div>
+  </div>
+
+</div>
+    
+
+<div class="webbrowser_container">
+
+</div>]]></browser>
+  <clipboard><![CDATA[<div id="clipboard">
+    <div class="clipboard-content">
+        <textarea class="clipboard-textarea"></textarea>
+    </div>
+    <div class="clipboard-bottom">
+        <button id="clipboard-push-2-phone" class="btn_blue90 noborder"><%=UsedLang._button_push2phone %></button>
+        <button id="clipboard-read-from-phone" class="btn_white90 noborder"><%=UsedLang._button_readfromphone %></button>
+    </div>
+</div>]]></clipboard>
+  <filemanage><![CDATA[<div class="file_tool_bar">
+   <div class="search26"><div class="search26_left" /><input type="text" id="file_search_input" value=""/><div class="search26_r" style="cursor:pointer;"></div><div class="search26_right" /></div>
+   <div class="command">
+     <a class="btn_blue90" id="importFileBtn" href="#"><%=UsedLang._menu_import %></a>
+
+     <div class="abtn_wrap">
+        <a class="abtn abtn_right btn-state-disabled" style="margin-left:-1px;" menu="Export"><%=UsedLang._menu_export %></a>
+        <a class="abtn btn-state-disabled" style="margin-left:-1px;" menu="Delete"><%=UsedLang._menu_delete %></a>
+        <a class="abtn btn-state-disabled" style="margin-left:-1px;" menu="Paste"><%=UsedLang._menu_paste %></a>
+        <a class="abtn btn-state-disabled" style="margin-left:-1px;" menu="Copy"><%=UsedLang._menu_copy %></a>
+        <a class="abtn btn-state-disabled" style="margin-left:-1px;" menu="Cut"><%=UsedLang._menu_cut %></a>
+        <a class="abtn abtn_left btn-state-disabled" style="margin-left:-1px;" menu="Rename"><%=UsedLang._menu_rename %></a>
+     </div>
+     <a class="btn_white90" id="newDirBtn" href="#"><%=UsedLang._menu_new_folder %></a>
+     <a class="btn_white65" id="refreshFileBtn" href="#"><%=UsedLang._menu_refresh %></a>
+  </div>
+</div>
+
+<div class="path_box" style="border-bottom:transparent;">
+ <a class="btn_back btn_back_disable" href="#" id="toolbar_back"></a>
+ <a class="btn_go btn_go_disable" href="#" id="toolbar_forward"></a>
+ <div class="path_nav" id="nav_dir_div"></div>
+</div>
+
+<table class="verti_split" width="100%">
+    <tr >
+        <td class="verti_split_l" width="194px" height="25px"></td>
+        <td class="verti_split_c" height="25px">&nbsp;</td>
+        <td class="verti_split_r" width="195px" height="25px"></td>
+    </tr>
+</table>
+
+
+<div id="file_tree" class="fileTree" />
+
+<div id="hori_split">
+    <table class="hori_split" width="16px" height="100%">
+        <tr ><td class="hori_split_t" width="16px" height="194px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
+        <tr ><td class="hori_split_c" width="16px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
+        <tr ><td class="hori_split_b" width="16px" height="194px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
+    </table>
+</div>
+<div id="grid">
+     <div id="file_grid"  style="width:100%;height:100%;outline:0;">
+        
+    </div>
+</div>
+
+<div class="win_bottom">
+     <div class="fileDetail">
+       
+     </div>
+     <span id="sdCardSummary" class="cardSummary"></span>
+</div
+]]></filemanage>
+  <music><![CDATA[<div class="tool_bar">
+  <div class="search26">
+    <div class="search26_left" />
+    <input type="text" id="music_search_input" value=""/>
+    <div class="search26_r" style="cursor:pointer;"></div>
+    <div class="search26_right" />
+  </div>
+   <div class="abtn_wrap icon_btn_wrap">
+            <a class="icon_abtn icon_abtn_left focus" style="margin-left:-1px;" menu="type_list" ><b class="list_type type_list" title="<%=usedLang._title_list_type_songs %>"></b></a>
+            <a class="icon_abtn" style="margin-left:-1px;" menu="type_thumb"><b class="list_type type_thumb"  title="<%=usedLang._title_list_type_albums %>"></b></a>
+   </div>
+  <div class="command">
+
+    <a class="btn_blue90" id="importMusicBtn" href="#"><%=common._menu_import %></a>
+   
+    <div class="abtn_wrap">
+        <a class="abtn abtn_right btn-state-disabled" style="margin-left:-1px;" menu="Backup"><%=common._menu_export %></a>
+        <a class="abtn abtn_left btn-state-disabled" style="margin-left:-1px;" menu="Delete"><%=common._menu_delete %></a>
+     </div>
+     
+      <a class="btn_white65" id="refreshMusicBtn" href="#"><%=common._menu_refresh %></a>
+    
+
+    
+  </div>
+</div>
+<div class="path_box" style="display:none;">
+   <div class="path_nav">
+   </div>
+</div>
+<div id="music_grid">
+   
+</div>
+
+    
+  
+
+]]></music>
+  <noticeWidget><![CDATA[<script type="text/template" id="nw-theme-apk-icon">
+<table class="notice-wr">
+    <tr>
+        <td width="40px"><img src="ui/theme/default/images/app-icon-default.png"/*tpa=http://192.168.119.101:8888/ui/template/ui/theme/default/images/app-icon-default.png*/ width="40px"/></td>
+        <td class="notice-body"><%=msgBody %></td>
+        <td>&nbsp;</td>
+        <td width="50px"></td>
+        <td width="100px" class="notice-status"><%=msgStatus %></td>
+        <td class="notice-close"><img src="ui/fancybox/fancy_close.png"/*tpa=http://192.168.119.101:8888/ui/template/ui/fancybox/fancy_close.png*/ style="display:none"></td>
+    </tr>
+</table>
+</script>
+<script type="text/template" id="nw-theme-custom-icon">
+<table class="notice-wr">
+    <tr>
+        <td width="40px"><img src="<%=msgIcon %>" width="40px"/></td>
+        <td class="notice-body"><%=msgBody %></td>
+        <td>&nbsp;</td>
+        <td width="50px"></td>
+        <td width="100px" class="notice-status"><%=msgStatus %></td>
+        <td class="notice-close"><img src="ui/fancybox/fancy_close.png"/*tpa=http://192.168.119.101:8888/ui/template/ui/fancybox/fancy_close.png*/ style="display:none"></td>
+    </tr>
+</table>
+</script>
+<script type="text/template" id="nw-theme-default-icon">
+<table class="notice-wr">
+    <tr>
+        <td width="40px"><img src="ui/theme/default/images/finish.png"/*tpa=http://192.168.119.101:8888/ui/template/ui/theme/default/images/finish.png*/ width="40px"/></td>
+        <td class="notice-body"><%=msgBody %></td>
+        <td>&nbsp;</td>
+        <td width="50px"></td>
+        <td class="notice-status msgAction"></td>
+        <td class="notice-close"><img src="ui/fancybox/fancy_close.png"/*tpa=http://192.168.119.101:8888/ui/template/ui/fancybox/fancy_close.png*/ style="display:none"></td>
+    </tr>
+</table>
+</script>
+<script type="text/template" id="nw-theme-sms-icon">
+<table class="notice-wr">
+    <tr>
+        <td width="40px"><img src="ui/theme/default/images/message_indicator.png"/*tpa=http://192.168.119.101:8888/ui/template/ui/theme/default/images/message_indicator.png*/ width="40px"/></td>
+        <td class="notice-body" style="cursor:pointer;"><%=msgBody %></td>
+        <td>&nbsp;</td>
+        <td width="16px"></td>
+        <td class="notice-status msgAction" width="50px" style="display:none"></td>
+        <td class="notice-close"><img src="ui/fancybox/fancy_close.png"/*tpa=http://192.168.119.101:8888/ui/template/ui/fancybox/fancy_close.png*/ style="display:none"></td>
+    </tr>
+</table>
+</script>
+<script type="text/template" id="nw-special-low-battery-20">
+<table class="notice-wr">
+    <tr>
+        <td width="40px"><img src="ui/theme/default/images/message_indicator.png"/*tpa=http://192.168.119.101:8888/ui/template/ui/theme/default/images/message_indicator.png*/ width="40px"/></td>
+        <td class="notice-body" style="cursor:pointer;"></td>
+        <td>&nbsp;</td>
+        <td width="16px"></td>
+        <td class="notice-status msgAction" width="50px" style="display:none"></td>
+        <td class="notice-close"></td>
+    </tr>
+</table>
+</script>
+<script type="text/template" id="nw-special-low-battery-5">
+<table class="notice-wr">
+    <tr>
+        <td width="40px"><img src="ui/theme/default/images/message_indicator.png"/*tpa=http://192.168.119.101:8888/ui/template/ui/theme/default/images/message_indicator.png*/ width="40px"/></td>
+        <td class="notice-body" style="cursor:pointer;"><%=msgBody %></td>
+        <td>&nbsp;</td>
+        <td width="16px"></td>
+        <td class="notice-status msgAction" width="50px" style="display:none"></td>
+        <td class="notice-close"><img src="ui/fancybox/fancy_close.png"/*tpa=http://192.168.119.101:8888/ui/template/ui/fancybox/fancy_close.png*/ style="display:none"></td>
+    </tr>
+</table>
+</script>]]></noticeWidget>
+  <photo-gallery><![CDATA[ <table class="ad-gallery">
+    <tr>
+        <td align="center">
+              <div class="ad-image-wrapper">
+                <div class="ad-image"><img><p class="ad-image-description"></p></div>
+              </div>
+               <div class="ad-controls">
+                   <div class="gallery_item_command"> 
+                        <div class="command_left">
+                            <a class="photo_download_icon" cmd="downLoad" title="<%=usedLang._menu_title_down_load %>">&nbsp;&nbsp;</a> 
+                            <a class="photo_setting" cmd="settingBg" title="<%=usedLang._menu_title_setting_bg %>">&nbsp;&nbsp;</a>
+                            <a class="photo_delete" cmd="delete" title="<%=usedLang._menu_title_delete %>">&nbsp;&nbsp;</a>
+                        </div>
+                       
+                         <div class="command_right">                           
+                            <a class="rotate_left_save" cmd="rotate_left_save" title="<%=usedLang._menu_title_rotate_left %>">&nbsp;&nbsp;</a> 
+                            <a class="rotate_right_save" cmd="rotate_right_save" title="<%=usedLang._menu_title_rotate_right %>">&nbsp;&nbsp;</a>
+                        </div>
+                         <div class="item_title" />
+                    </div>
+              </div>
+        </td>
+        <td width="150px">
+              <div class="ad-nav">
+                <div class="ad-thumbs">
+                  <ul class="ad-thumb-list">
+                   
+                  </ul>
+                </div>
+              </div>
+        </td>
+    </tr> 
+   
+ </table>]]></photo-gallery>
+  <photo><![CDATA[<div class="tool_bar" style="display:none">
+  <div class="search26">
+    <div class="search26_left" />
+    <input type="text" id="photo_search_input" value=""/>
+    <div class="search26_r" style="cursor:pointer;"></div>
+    <div class="search26_right" />
+  </div>
+
+  <div class="command">
+
+    <a class="btn_blue90" id="importPhotoBtn" href="#"><%=common._menu_import %></a>
+    <div class="abtn_wrap">
+        <a class="abtn abtn_right btn-state-disabled" style="margin-left:-1px;" menu="Backup"><%=common._menu_export %></a>
+        <a class="abtn abtn_left btn-state-disabled" style="margin-left:-1px;" menu="Delete"><%=common._menu_delete %></a>
+     </div>
+     <a class="btn_white65" id="refreshPhotoBtn" href="#"><%=common._menu_refresh %></a>
+  </div>
+</div>
+<div class="path_box" style="display:none">
+   <div class="path_nav">
+   </div>
+</div>
+<div id="photo_grid">
+
+</div>
+    
+  
+
+]]></photo>
+  <ringtone><![CDATA[<div class="ringtone_top_box">  
+        <div class="tabs">
+            <div class="tab_current" tabId="telephone" init="0"><div class="tab_l"></div><div class="tab_r"></div><div class="tab_c" style="opacity: 1;padding:0 20px 0 20px; "><%=usedLang._tab_ringtone %></div></div>
+            <div class="tab" tabId="message" init="0"><div class="tab_l"></div><div class="tab_r"></div><div class="tab_c tab_no_icon" style="padding:0 20px 0 20px;"><%=usedLang._tab_notification %></div></div>
+            <div class="tab" tabId="alarm" init="0"><div class="tab_l"></div><div class="tab_r"></div><div class="tab_c tab_no_icon" style="opacity: 1;padding:0 20px 0 20px; "><%=usedLang._tab_alarm %></div></div>
+        </div>
+      <div class="search26">
+            <div class="search26_left"></div>
+          <input type="text" id="ringtone_search_input" value="">
+          <div class="search26_r" style="cursor:pointer;"></div>
+          <div class="search26_right"></div>
+      </div>      
+      <div class="command">
+        <a class="btn_blue90" id="importRingtoneBtn" href="#"><%=common._menu_import %></a>
+        <div class="abtn_wrap">
+            <a class="abtn abtn_right btn-state-disabled" style="margin-left:-1px;" menu="Backup"><%=common._menu_export %></a>
+            <a class="abtn abtn_left btn-state-disabled" style="margin-left:-1px;" menu="Delete"><%=common._menu_delete %></a>
+        </div>
+        <a class="btn_white65" id="refreshRingtoneBtn" href="#"><%=common._menu_refresh %></a>
+      </div> 
+</div>
+<div id="ringtone_grid">
+   <div id="telephone_list" class="ringtone_list_body">
+        <div class="ringtone_list_item head_row">
+            <p class="checkbox" style="z-index:2;"  title="<%=common._title_select_all %>"><input type="checkbox"  class="checkbox_all"></p>
+            <div class="col_name sort_col"><span order="0" sortcol="name"><%=usedLang._col_name %></span><p class="order_icon"></p></div>
+            <div class="col_time sort_col"><span order="0" sortcol="duration"><%=usedLang._col_time %></span><p class="order_icon"></p></div>
+            <div class="col_size sort_col" sytle="text-align:center;"><span order="0" sortcol="size"><%=usedLang._col_size %></span><p class="order_icon"></p></div>
+            
+        </div>
+
+       <div class="ringtone_list play_list">   
+        </div>
+   </div>
+  <div id="message_list" class="ringtone_list_body"  style="display:none;">
+        <div class="ringtone_list_item head_row">
+            <p class="checkbox" style="z-index:2;" title="<%=common._title_select_all %>"><input type="checkbox" class="checkbox_all"></p>
+            <div class="col_name sort_col"><span order="0" sortcol="name"><%=usedLang._col_name %></span><p class="order_icon"></p></div>
+            <div class="col_time sort_col"><span order="0" sortcol="duration"><%=usedLang._col_time %></span><p class="order_icon"></p></div>
+            <div class="col_size sort_col" sytle="text-align:center;"><span order="0" sortcol="size"><%=usedLang._col_size %></span><p class="order_icon"></p></div>
+        </div>
+        <div class="ringtone_list play_list">
+            
+        </div>
+   </div>
+   
+   <div id="alarm_list" class="ringtone_list_body" style="display:none;">
+        <div class="ringtone_list_item head_row">
+            <p class="checkbox" style="z-index:2;"  title="<%=common._title_select_all %>"><input type="checkbox" class="checkbox_all"></p>
+            <div class="col_name sort_col"><span order="0" sortcol="name"><%=usedLang._col_name %></span><p class="order_icon"></p></div>
+            <div class="col_time sort_col"><span order="0" sortcol="duration"><%=usedLang._col_time %></span><p class="order_icon"></p></div>
+            <div class="col_size sort_col" sytle="text-align:center;"><span order="0" sortcol="size"><%=usedLang._col_size %></span><p class="order_icon"></p></div>
+        </div>
+        <div class="ringtone_list play_list">
+            
+        </div>
+   </div>
+</div>]]></ringtone>
+  <sms><![CDATA[<script type="text/template" id="tpl-im-window">
+<div class="window im-window" id="im-window" style="z-index:2" mh="500">
+        <table class="im-window-wrapper">
+            <tbody>
+                <tr class="im-window-titlebar">
+                    <td class="im-window-title-l">
+                        &nbsp;
+                    </td>
+                    <td class="im-window-title-c">
+                        <div style="float: left;position:absolute;top:12px;">
+                            <img src="ui/theme/default/images/icon_contacts_80.png"/*tpa=http://192.168.119.101:8888/ui/template/ui/theme/default/images/icon_contacts_80.png*/ valign="middle" class="im-window-icon"><span class="window-title" style="cursor: default;"><%=UsedLang._module_name_contacts  %></span>
+                            <br/>
+                            <div class="search26" style="display: block;width: 260px;margin-left: 6px;margin-top: 17px;"><div class="search26_left"></div><input style="width:90%" type="text" id="searchBox"/><div class="contact-searct-tips hide"><%=UsedLang._plain_text_no_matches  %></div><div class="search26_r" style="cursor:pointer;"></div><div class="search26_right"></div></div>
+                            
+                        </div>
+                        <div class="window-x" style="margin-top:12px">
+                        </div>
+                        <div class="window-_" style="margin-top:12px">
+                        </div>
+                    </td>
+                    <td class="im-window-title-r">
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td class="im-window-body-l">
+                    </td>
+                    <td class="im-window-body-c" style="height:500px;">
+                        <div class="im-window-contact-table">                           
+                        </div>
+                    </td>
+                    <td class="im-window-body-r">
+                    </td>
+                </tr>
+                <tr class="im-window-bottom">
+                    <td class="im-window-bottom-l">
+                        &nbsp;
+                    </td>
+                    <td class="im-window-bottom-c">
+                        <div class="im-window-bottom-resize-s ui-resizable-handle ui-resizable-s"></div>
+                        <button id="btn-new-contact" title="New Contact"><span><%=UsedLang._button_mcontacts_add_contact  %></span></button>
+                        <button id="btn-all-calllog" title="All Calllog" style="margin-left:8px;display:none;"><span><%=UsedLang._button_mcontacts_calllog  %></span></button>
+                        <button id="btn-contacts-reload" title="Reload All Contacts">&nbsp;</button>                    
+                    </td>
+                    <td class="im-window-bottom-r">
+                        &nbsp;
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</script>
+
+<script type="text/template" id="tpl-all-calllog">
+<div class="all-calllog" style="background-color: #F1F1F1;">
+    <div class="all-calllog-type-switcher">
+        <div class="application-tab-l-patch"></div>
+        <div class="application-tab-r-patch"></div>
+        <div class="tabs">
+            <div class="tab_current" m="ac_2_all"><div class="tab_l"></div><div class="tab_r"></div><div class="tab_c ac_2_all">All</div></div>
+            <div class="tab" m="ac_2_incoming"><div class="tab_l"></div><div class="tab_r"></div><div class="tab_c ac_2_incoming">Incoming</div></div>
+            <div class="tab" m="ac_2_outgoing"><div class="tab_l"></div><div class="tab_r"></div><div class="tab_c ac_2_outgoing">Outgoing</div></div>
+            <div class="tab" m="ac_2_missed"><div class="tab_l"></div><div class="tab_r"></div><div class="tab_c ac_2_missed">Missed</div></div>
+        </div>
+        <button id="btn-all-calllog-refresh" class="btn_white65 floatright noborder cursorhand" style="position: absolute;right: 100px;top: 5px;">Refresh</button>
+        <button id="btn-all-calllog-delete-selected" class="btn_blue90 floatright noborder cursorhand" style="position: absolute;right: 0;top: 5px;">Delete</button>
+    </div>
+    <div class="all-calllog-titlebar-l-patcher" style="top: 40px;"></div>
+    <div class="all-calllog-titlebar-r-patcher" style="top: 40px;"></div>
+    <div class="all-calllog-titlebar width100p" style="display:inline-block;height:25px;border-top:solid 1px lightgray;border-bottom:solid 1px white;">        
+        <table class="width100p">
+            <tr>
+                <td class="splitor" style="width: 30px"><p class="checkbox allcalllog-checkall" style="margin-top:5px;" checked="false"></p></td>
+                <td class="splitor" style="width: 6%;"><%=UsedLang._col_mcalllog_type  %></td>
+                <td class="splitor" style="width: 18%;"><%=UsedLang._col_mcalllog_name  %></td>
+                <td class="splitor" style="width: 18%;"><%=UsedLang._col_mcalllog_phone  %></td>
+                <td class="splitor" style="width: 24%;"><%=UsedLang._col_mcalllog_date  %></td>
+                <td class="splitor" style="width: 14%;"><%=UsedLang._col_mcalllog_duration  %></td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+    </div>
+    <div class="all-calllog-container" load="true">
+    </div>    
+</div>
+</script>
+
+<script type="text/template" id="tpl-all-calllog-item">
+<div class="calllog-item" style="height:40px;margin:3px auto;position:relative;">
+    <table class="width100p">
+        <tr>
+            <td style="width: 30px;"><p class="checkbox allcalllog-check-item" checked="false" cid="<%=id %>"></p></td>
+            <td style="width: 6%;"><span ctype="<%=type %>" class="calllog-status-icon floatleft" style="margin-top:7px;margin-left: 12px;"></span></td>
+            <td style="width: 19%;position:relative;cursor:pointer;" class="calllog-name-click-area">
+                <img src="ui/theme/default/images/contact30X30.jpg"/*tpa=http://192.168.119.101:8888/ui/template/ui/theme/default/images/contact30X30.jpg*/ rel='<%=hostAddress %>/sdctl/contacts/image/bynumber/?number=<%=number %>' width="28px" height="28px" style="float:left;margin:6px 4px 0 4px;"/>
+                <div class="calllog-name" style="font-size: 13px;color:black;"><% if(name == "") {%> <%=number %><% }else{ %><%=name %><%} %></div>
+            </td>
+            <td style="width: 18%;"><span class="calllog-number" style="width:132px;font-size: 13px;color: #8596AD;margin-top: 6px;"><%=number %></span></td>
+            <td style="width: 23%;"><span class="callog-date" style="width:165px;font-size: 12px;margin-left:0;margin-top: 6px;"><%=df %></span></td>
+            <td style="width: 13%;">
+                <span class="calllog-duration width100p" style="margin-top: 6px;font-size:13px;color: #8596AD;text-align:right;">
+                    <% if(type == 3) { %>Missed<%}else{ %>
+                    <%= secondsToTime(duration) %><%} %>
+                </span>
+            </td>
+            <td>                             
+                &nbsp;
+                <div class="allcalllog-chat cursorhand hide" cid="<%=id %>" title="<%=UsedLang._title_click_open_chat_window  %>"><span class="chat-icon floatleft" style="margin-right: 3px;margin-top: 4px;"></span></div>
+                <% if(name == "") { %>
+                <div class="allcalllog-create cursorhand hide" title="<%=UsedLang._title_create_contact_for_this_calllog  %>"><span class="quick-add2contact-icon floatleft" style="margin-right: 3px;margin-top: 4px;"></span></div>
+                <% } %>
+                
+                <div class="allcalllog-delete cursorhand hide" cid="<%=id %>" title="<%=UsedLang._title_delete_this_calllog  %>"><span class="trash-icon floatleft" style="margin-right: 3px;margin-top: 4px;"></span></div>   
+            </td>
+        </tr>
+    </table>    
+</div>
+</script>
+
+<script type="text/template" id="tpl-im-window-group">
+<div class="im-window-contact-group">
+    <div class="im-window-contact-group-line">
+        <span class="im-window-contact-arrow left-icon floatleft" style="margin: 4px 0 0 8px;"></span>
+        <span class="im-window-contact-grouptitle-name floatleft"><%=name %></span>
+        <span class="im-window-contact-grouptitle-statuswrapper floatleft" style="margin-top:4px">(<span class="im-window-contact-grouptitle-count"><%=count %></span>)</span>
+        <span class="im-window-contact-grouptitle-loading floatright"><img src="ui/theme/default/images/file/tree_loading.gif"/*tpa=http://192.168.119.101:8888/ui/template/ui/theme/default/images/file/tree_loading.gif*/ alt=""></span>
+        <span class="im-window-contact-grouptitle-partload floatleft hide" title="<%=UsedLang._tip_partly_load %>"></span>
+    </div>
+    <ul class="im-window-contact-group-container hide" gid="<%=id %>"></ul>
+</div>
+</script>
+
+<script type="text/template" id="tpl-im-window-contact-item">
+<li>
+    <table>
+        <tbody>
+            <tr class="im-window-contact-item" cid="<%=id %>" tid="-1" style="height:36px">
+                <td width="50px" style="vertical-align: middle;"><img cid="<%=id %>" src="ui/theme/default/images/contact30X30.jpg"/*tpa=http://192.168.119.101:8888/ui/template/ui/theme/default/images/contact30X30.jpg*/ rel="<%=icon %>" valign="middle" class="im-window-contact-icon"></td>
+                <td class="im-window-contact-item-name" style="vertical-align: middle;" valign="middle" dest="<%=phone %>"><span class="im-window-contact-item-name-limit"><%=name %></span></td>
+                <td width="60px" valign="middle" style="vertical-align: middle;"><span class='im-window-contact-cmd-del trash-icon floatright hide' title="<%=UsedLang._tip_delete_this_contact  %>" style="margin-right:10px;float:right;"></span><span class='im-window-contact-cmd-edit edit-icon floatright hide' style="margin-right:10px;float:right;cursor:pointer" title="<%=UsedLang._tip_edit_this_contact  %>"></span></td>
+            </tr>
+        </tbody>
+    </table>
+</li>
+</script>
+
+<script type="text/template" id="tpl-im-chatsingle">
+<div class="single-chat-window">
+<div class="single-chat-tab-selector width100p height40">
+    <div class="tabs">
+        <div class="tab_current">
+            <div class="tab_l"></div>
+            <div class="tab_r"></div>
+            <div class="tab_c chaticon" style="opacity: 1; ">
+                <a href="#chat" class="single-chat-tab-selected limitwidth"><%=UsedLang._tab_mchat_chat  %></a>
+            </div>
+        </div>
+        <div class="tab"><div class="tab_l"></div><div class="tab_r"></div><div class="tab_c contactinfoicon"><a href="#contactinfo"><%=UsedLang._tab_mchat_contact_info %></a></div></div>
+        <div class="tab"><div class="tab_l"></div><div class="tab_r"></div><div class="tab_c calllogicon"><a href="#calllogwrap"><%=UsedLang._tab_mchat_calllog  %></a></div></div>
+    </div>
+    <div class="single-chat-tab-l-patch"></div>
+    <div class="single-chat-tab-r-patch"></div>
+    <div class="single-chat-refresh-current"><button class="single-chat-refresh-btn"><%=UsedLang._plain_text_mchat_refresh  %></button></div>
+</div>
+<div tid="<%=id %>" dest="<%=dest %>" class="single-chat-container chat im-chatsingle-content width100p" style="width:100%;">
+    <div class="single-chat-chat-bottom-mask"></div>
+    <table class="height100p" style="width:640px">
+        <tr>
+            <td colspan="2">    
+                <div class="msg-list overflow-only-y" style="width:640px;height:340px;">
+                    <div class="msg-more hide">
+                        <div class="msg-more-one-page">More Messages</div>                        
+                    </div>   
+                                  
+                </div>
+                <div class="msg-list-l-patch"></div>
+                <div class="msg-list-r-patch"></div>
+                <div class="msg-list-loading-div hide">
+                    <span>Reading new message...</span>
+                </div>
+            </td>
+        </tr>
+        <tr style="height:120px">
+            <td style="position:relative;">
+                <div style="height: 63px;padding: 8px;margin-top: 2px;">
+                    <textarea class="msg-text" style="width:98%;height:98%"></textarea>                    
+                </div>
+                <div class="chat-sms-counter">0</div>           
+            
+                <button style="margin-top:5px;position: absolute;right: 8px;border:0;color:#5CA1E8;" class="btn_blue62 msg-send cursorhand disabled" disabled="disabled"><%=UsedLang._button_mchat_send  %></button>
+                <a class="single-chat-tip-sp" style="text-align: center;display: inline-block;margin-left: 8px;color: #5D6A7A;margin-top: 4px;font-size: 13px;cursor:default;position: absolute;right: 71px;width: 100px;"><%=UsedLang._plain_text_mchat_send_tip  %></a>
+            </td>
+        </tr>
+    </table>
+    
+</div>
+<div class="contactinfo im-chatsingle-content width100p overflow-only-y hide">
+
+</div>
+<div class="calllogwrap im-chatsingle-content width100p hide" style="width:640px;">
+    <div class="all-calllog-titlebar-l-patcher" style="top: 40px;"></div>
+    <div class="all-calllog-titlebar-r-patcher" style="top: 40px;"></div>
+    <div class="all-calllog-titlebar width100p" style="display:inline-block;height:25px;border-top:solid 1px lightgray;border-bottom:solid 1px white;">        
+        <table class="width100p">
+            <tbody>
+                <tr>
+                <td class="splitor" style="width: 7%;"><%=UsedLang._col_mcalllog_type  %></td>
+                <td class="splitor" style="width: 20%;"><%=UsedLang._col_mcalllog_name  %></td>
+                <td class="splitor" style="width: 19%;"><%=UsedLang._col_mcalllog_phone  %></td>
+                <td class="splitor" style="width: 28%;"><%=UsedLang._col_mcalllog_date  %></td>
+                <td class="splitor" style="width: 14%;"><%=UsedLang._col_mcalllog_duration  %></td>
+                <td>&nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="calllog width100p overflow-only-y" style="height:440px;outline:0;">
+    </div>
+</div>
+
+</script>
+
+<script type="text/template" id="tpl-im-contactinfo-item">
+<div actiontype="<%=actiontype %>" style="width:580px;margin:0 auto;padding: 8px;margin-top: 36px;" class="contactinfo-content">
+    <div class="height100p floatleft" style="width: 80px;vertical-align: top;display: block;"><img width="80px" src="<%=photo_url %>" class="contactinfo-image"/>&nbsp;</div>
+    <div class="floatleft" style="margin-left: 26px;">
+        <table class="width100p" style="font-size:12px;">
+            <tr class="height40">
+                <td class="width80 vMiddle" style="color:#58708a;"><%=UsedLang._plain_text_contactinfo_name  %></td>
+                <td class="vMiddle textindent12">
+                    <div class="inputbox" style="width: 200px">
+                        <input type="text" class="contactinfo-contact-name" value="<%=name.display_name %>"/>
+                    </div>
+                    <div class="contactinfo-contact-name-tip hide" style="color: red;text-indent: 0;margin-top: 4px;margin-left: 22px;float: left;">
+                        <%=UsedLang._plain_text_contactinfo_empty  %>
+                    </div>
+                </td>
+            </tr>
+            <tr class="contactinfo-contact-phone-container">
+                <td class="width80" style="line-height:34px;">
+                    <div class="phone-type-wrapper-another">
+                        <select class="phone-type" style="color:#58708a;">
+                            <option value="2"><%=UsedLang._plain_text_contactinfo_phone_type_mobile  %></option>
+                            <option value="1"><%=UsedLang._plain_text_contactinfo_phone_type_home  %></option>
+                            <option value="3"><%=UsedLang._plain_text_contactinfo_phone_type_work  %></option>
+                            <option value="4"><%=UsedLang._plain_text_contactinfo_phone_type_homefax  %></option>
+                            <option value="5"><%=UsedLang._plain_text_contactinfo_phone_type_workfax  %></option>
+                            <option value="7"><%=UsedLang._plain_text_contactinfo_phone_type_other  %></option>
+                        </select>
+                    </div>
+                </td>
+                <td class="textindent12">
+                    <div class="width100p height30 vMiddle contactinfo-contact-phone-item" style="margin-top:5px;">                        
+                        <div class="inputbox floatleft" style="width: 200px;margin-left: 7px">
+                            <input type="text" class="contactinfo-contact-phone" />
+                        </div>
+                        <button class="contactinfo-contact-phone-del margin-left-10" style="margin-top:3px;" disabled="disabled"></button>
+                        <button class="contactinfo-contact-phone-add margin-left-10" style="margin-top:3px;"></button>                
+                        <span class="contactinfo-contact-phone-tip hide" style="text-indent: 0;color: red;margin-left: 13px;">
+                            <%=UsedLang._plain_text_contactinfo_empty  %>
+                        </span>
+                    </div>
+                </td>
+            </tr>            
+            <tr class="height80">
+                <td class="width80" style="line-height:34px; color:#58708a;"><%=UsedLang._plain_text_contactinfo_note  %></td>
+                <td class="vMiddle">
+                    <div style="margin-top: 10px;float:left;width: 330px;height:72px;margin-bottom: 10px;">
+                        <textarea class="contactinfo-contact-note" style="width:98%;height:98%;"><% if(notes.length != 0) { %> <%=notes[0].data %> <% } %></textarea>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div style="clear:both;"></div>
+</div>
+<div class="single-chat-contactinfo-bottom-mask">
+    <button class="btn_white65 floatright noborder contact-info-cancel" style="margin-right:12px;margin-top: 10px;">Cancel</button><button class="btn_blue62 floatright noborder contact-info-create-or-save" style="margin-right:14px;margin-top: 10px;"><%=actionbutton %></button>
+</div>
+</script>
+
+<script type="text/template" id="tpl-im-calllog-item">
+<div class="calllog-item" style="height:40px;margin:3px auto;position:relative;">
+    <table class="width100p">
+        <tr>
+            <td style="width: 5%;"><span ctype="<%=type %>" class="calllog-status-icon floatleft" style="margin-top:7px;margin-left: 12px;"></span></td>
+            <td style="width: 20%;position:relative;">
+                <div class="calllog-name" style="font-size: 13px;color: #8596AD;margin-top: 6px;text-indent:20px;"><%=name %></div>
+            </td>
+            <td style="width: 19%;"><span class="calllog-number" style="width:106px;font-size: 13px;color: #8596AD;margin-top: 6px;"><%=number %></span></td>
+            <td style="width: 29%;"><span class="callog-date" style="width:165px;font-size: 12px;margin-left:0;margin-top: 6px;"><%=df %></span></td>
+            <td style="width: 13%"><span class="calllog-duration" style="margin-top: 6px;font-size:13px;color: #8596AD;">
+            <% if(type == 3) { %>Missed<%}else{ %>
+                    <%= secondsToTime(duration) %><%} %>
+            </span></td>
+            <td>&nbsp;<div class="calllog-delete cursorhand hide" cid="<%=id %>" style="float:right;margin-right:8px;margin-top:6px;"><span class="trash-icon floatleft" style="margin-right: 3px;margin-top: 4px;"></span></div></td>
+        </tr>
+    </table>    
+</div>
+</script>
+
+<script type="text/template" id="tpl-im-msg-item">
+<div class="width90p smsfloat<%=type %> msg-item-wrapper" style="display:inline-block;margin-top:10px;margin-bottom:10px;padding: 0 10px;">
+<div class="width100max msg-item msg-item-type-<%=type %>" sid="<%=id %>" ut="<%=date %>">
+    <div class="msg-item-triangle-<%=type %>"></div>
+    <div class="width100auto">        
+        <div class="msg-item-body"><pre><%=body %></pre></div>
+    </div>
+    <div class="width100p" style="padding: 5px 3px 6px 0;display: inline-block;float:right">
+        <div class="msg-item-name hide" style="margin-left: 12px;"><% if(type == undefined || type == 2 || type == 4) {%>Me<%} else { %><%=name%><% } %></div>
+        <div class="msg-item-status" style="margin-left: 12px;float: left;">
+            <% if(type == 5) { %>
+            <span style="display: inline-block;width: 12px;height: 13px;background: transparent url(./ui/theme/default/images/until.png) no-repeat -113px -402px;cursor:pointer;" title="Failed"></span>
+            <% }else if(type == 4) { %>
+            <img src="ui/theme/default/images/sending.gif"/*tpa=http://192.168.119.101:8888/ui/template/ui/theme/default/images/sending.gif*/>
+            <% }else{ %>
+            &nbsp;
+            <% } %>
+        </div>
+        <div class="msg-item-date msg-item-date-color-<%=type %>" style="margin-left: 8px;float: right;margin-right: 8px;"><%=df %></div>        
+        <div style="position:absolute;right:3px;" class="msg-item-op">
+            <button class="msg-item-delete trash-icon" style="background-color: transparent;border: 0;color: blue;font-weight: bold;margin-right:10px;"></button>
+            <button class="msg-item-repeat sms-forward-icon" style="background-color: transparent;border: 0;color: blue;font-weight: bold;margin-right:6px;margin-left: 10px;"></button>
+        </div>
+    </div>
+</div>
+</div>
+</script>
+
+<script type="text/template" id="tpl-smslist">
+<div id="smslist">
+    <table class="width100p height100p">
+        <tr class="height40">
+            <td class="vMiddle">    
+                <div>
+                    <div class="floatleft">
+                        <p class="checkbox floatleft" id="smslist-checkall" style="margin-top: 4px; margin-left: 4px;display:none;">
+                            <input type="checkbox">
+                        </p>                     
+                    </div>
+                    <div class="floatright">
+                        <div class="btn_blue90 button floatright margin-left-10" id="smslist-new-sms"><%=UsedLang._button_msmslist_new_sms  %></div><button class="btn_white65 button floatright margin-left-10 disabled" id="smslist-delete" disabled="disabled"><%=UsedLang._button_msmslist_delete  %></button><button class="btn_white65 button floatright margin-left-10 noborder" id="smslist-refresh"><%=UsedLang._button_msmslist_refresh  %></button>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr class="height15">
+            <td>
+                <div class="width100p">
+                    <table class="down-shadow-body width100p height15">
+                        <tbody>
+                            <tr>
+                                <td class="down-shadow-body-l" width="194px"></td>
+                                <td class="down-shadow-body-c">&nbsp;</td>
+                                <td class="down-shadow-body-r" width="195px"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>            
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="width100p overflow-only-y" id="smslist_container" style="height:545px">
+                    <div id="smslist_loading_mask" style="margin: 0 auto; width: 87px; margin-top: 206px;display:none;"><img src="ui/theme/default/images/loading.gif"/*tpa=http://192.168.119.101:8888/ui/template/ui/theme/default/images/loading.gif*/ valign="middle"><span style=" display: inline-block; line-height: 15px;  vertical-align: middle;  font-size: 12px;  margin-left: 6px;"></span></div>
+                    <div class="smslist-more hide">
+                        <button class="smslist-more-button noborder"><%=UsedLang._button_msmslist_loading_more  %></button>                        
+                    </div>
+                </div>
+                
+            </td>
+        </tr>
+    </table>    
+</div>
+</script>
+
+<script type="text/template" id="tpl-smslist-item">
+<div class="height110 width100p block smslist-item" tid="<%=id %>" ut="<%=date %>">
+    <table class="width100p height100p">
+        <tr>
+            <td class="vMiddle width20 textRight">
+                <div class="smslist-item-checkbox">
+                    <p class="checkbox">
+                        <input type="checkbox" tid="<%=id %>">
+                    </p>     
+                </div>
+            </td>
+            <td class="vMiddle width100"><div class="smslist-item-icon"><img rel="<%=icon %>" width="80px"/></div></td>
+            <td>
+                <table class="width100p height100p">
+                    <tr><td class="height30 vBottom"><div class="smslist-item-name floatleft txtBold" dest="<%=address %>"><%=name %></div><div class="floatleft txtBold" style="font-size: 12px;color: #58708A;margin-top:2px;margin-left:3px;"> (<%=msg_count %>)</div><div class="smslist-item-new-count floatright hide"><%=newCount %></div></td></tr>
+                    <tr><td class="font10px lh20px"><div class="smslist-item-msg cursorhand" style="width:668px;"><pre class="lh20px"><%=msg %></pre></div></td></tr>
+                    <tr><td class="height30"><div class="smslist-item-repeat cursorhand floatleft hide" style="margin-right:6px;display:none;"><span class="sms-forward-icon floatleft"></span><%=UsedLang._plain_text_msmslistitem_forward  %></div><div class="smslist-item-delete cursorhand floatleft hide"><span class="trash-icon floatleft"></span><%=UsedLang._plain_text_msmslistitem_delete  %></div><div class="smslist-item-date floatright" style="width:190px"><span class="clock-icon floatleft" style="padding-right:6px"></span><a ut="<%=date %>" class="txtOriGray"><%=df %></a></div></td></tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <div class="width100p height15" style="position:absolute;bottom:0;left:0;">
+        <table class="up-shadow-body width100p height15">
+            <tbody>
+                <tr>
+                    <td class="up-shadow-body-l" width="194px"></td>
+                    <td class="up-shadow-body-c">&nbsp;</td>
+                    <td class="up-shadow-body-r" width="198px"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>  
+</div>
+</script>
+
+<script type="text/template" id="tpl-new-contact">
+<div id="new-contact">
+<table class="width100p">
+    <tr class="height40">
+        <td class="width80 textRight vMiddle"><%=UsedLang._plain_text_mnewcontact_name  %></td>
+        <td class="vMiddle textindent12">
+            <div class="inputbox">
+                <input type="text" class="new-contact-name" />
+            </div>
+            <div class="new-contact-name-tip hide" style="position: absolute;top: 11px;color: red;right: 16px;text-indent: 0;">
+                <%=UsedLang._plain_text_mnewcontact_empty  %>
+            </div>
+        </td>
+    </tr>
+    <tr class="height40">
+        <td class="width80 textRight vMiddle"><%=UsedLang._plain_text_mnewcontact_group  %></td>
+        <td class="textindent12 vMiddle">
+            <div class="new-contact-group"></div>
+        </td>
+    </tr>
+    <tr>
+        <td class="width80 textRight" style="line-height:34px;"><%=UsedLang._plain_text_mnewcontact_phone  %></td>
+        <td class="textindent12 new-contact-phone-container">
+            <div class="width100p height30 vMiddle new-contact-phone-item" style="margin-top:5px;">
+                <div class="phone-type-wrapper">
+                    <select class="phone-type">
+                        <option value="2"><%=UsedLang._plain_text_mnewcontact_phone_type_mobile  %></option>
+                        <option value="1"><%=UsedLang._plain_text_mnewcontact_phone_type_home  %></option>
+                        <option value="3"><%=UsedLang._plain_text_mnewcontact_phone_type_work  %></option>
+                        <option value="4"><%=UsedLang._plain_text_mnewcontact_phone_type_homefax  %></option>
+                        <option value="5"><%=UsedLang._plain_text_mnewcontact_phone_type_workfax  %></option>
+                        <option value="7"><%=UsedLang._plain_text_mnewcontact_phone_type_other  %></option>
+                    </select>
+                </div>
+                <div class="inputbox floatleft" style="width: 126px;margin-left: 9px;">
+                    <input type="text" class="new-contact-phone" />
+                </div>
+                <button class="new-contact-phone-del margin-left-10" style="margin-top:3px;" disabled="disabled"></button>
+                <button class="new-contact-phone-add margin-left-10" style="margin-top:3px;"></button>                
+                <div class="new-contact-phone-tip hide" style="margin-top: 3px;margin-left: 0px;text-indent: 0;color: red;">
+                    <%=UsedLang._plain_text_mnewcontact_empty  %>
+                </div>
+            </div>
+        </td>
+    </tr>
+    <tr class="height80">
+        <td class="width80 textRight" style="line-height:34px;"><%=UsedLang._plain_text_mnewcontact_note  %></td>
+        <td class="vMiddle">
+            <div style="margin-top: 10px;float:left;width:200px;height:72px;">
+                <textarea class="new-contact-note" style="width:98%;height:98%;"></textarea>
+            </div>
+        </td>
+    </tr>
+    <tr class="height50">
+        <td colspan="2" class="vMiddle text-center" style="height: 60px;">
+            <button class="new-contact-btn-create btn_blue90" style="margin-top: -4px;margin-left: 96px;"><%=UsedLang._button_mnewcontact_create  %></button>
+            <button class="new-contact-btn-cancel btn_white75 margin-left-20" style="margin-top: -4px;margin-left: 26px;"><%=UsedLang._button_mnewcontact_cancel  %></button>            
+        </td>
+    </tr>
+</table>
+
+</div>
+</script>
+
+<script type="text/template" id="tpl-edit-contact">
+<div id="edit-contact">
+<table class="width100p">
+    <tr class="height40">
+        <td class="width80 textRight vMiddle"><%=UsedLang._plain_text_meditcontact_name  %></td>
+        <td class="vMiddle textindent12">
+            <div class="inputbox">
+                <input type="text" class="edit-contact-name" />
+            </div>
+            <div class="edit-contact-name-tip hide" style="position: absolute;top: 11px;color: red;right: 16px;text-indent: 0;">
+                <%=UsedLang._plain_text_meditcontact_empty  %>
+            </div>
+        </td>
+    </tr>
+    <tr class="height40 hide">
+        <td class="width80 textRight vMiddle"><%=UsedLang._plain_text_meditcontact_group  %></td>
+        <td class="textindent12 vMiddle">
+            <div class="edit-contact-group"></div>
+        </td>
+    </tr>
+    <tr>
+        <td class="width80 textRight" style="line-height:34px;"><%=UsedLang._plain_text_meditcontact_phone  %></td>
+        <td class="textindent12 edit-contact-phone-container">
+            <div class="width100p height30 vMiddle edit-contact-phone-item" style="margin-top:5px;">
+                <div class="phone-type-wrapper">
+                    <select class="phone-type">
+                        <option value="2"><%=UsedLang._plain_text_meditcontact_phone_type_mobile  %></option>
+                        <option value="1"><%=UsedLang._plain_text_meditcontact_phone_type_home  %></option>
+                        <option value="3"><%=UsedLang._plain_text_meditcontact_phone_type_work  %></option>
+                        <option value="4"><%=UsedLang._plain_text_meditcontact_phone_type_homefax  %></option>
+                        <option value="5"><%=UsedLang._plain_text_meditcontact_phone_type_workfax  %></option>
+                        <option value="7"><%=UsedLang._plain_text_meditcontact_phone_type_other  %></option>
+                    </select>
+                </div>
+                <div class="inputbox floatleft" style="width: 126px;margin-left: 9px;">
+                    <input type="text" class="edit-contact-phone" />
+                </div>
+                <button class="edit-contact-phone-del margin-left-10" style="margin-top:3px;" disabled="disabled"></button>
+                <button class="edit-contact-phone-add margin-left-10" style="margin-top:3px;"></button>                
+                <div class="edit-contact-phone-tip hide" style="margin-top: 3px;margin-left: 0px;text-indent: 0;color: red;">
+                    <%=UsedLang._plain_text_meditcontact_empty  %>
+                </div>
+            </div>
+        </td>
+    </tr>
+    <tr class="height80">
+        <td class="width80 textRight" style="line-height:34px;"><%=UsedLang._plain_text_meditcontact_note  %></td>
+        <td class="vMiddle">
+            <div style="margin-top: 10px;float:left;width:200px;height:72px;">
+                <textarea class="edit-contact-note" style="width:98%;height:98%;"></textarea>
+            </div>
+        </td>
+    </tr>
+    <tr class="height50">
+        <td colspan="2" class="vMiddle text-center" style="height: 60px;">
+            <button class="edit-contact-btn-create btn_blue90" style="margin-top: -4px;margin-left: 96px;"><%=UsedLang._button_meditcontact_save  %></button>
+            <button class="edit-contact-btn-cancel btn_white75 margin-left-20" style="margin-top: -4px;margin-left: 26px;"><%=UsedLang._button_meditcontact_cancel  %></button>        
+        </td>
+    </tr>
+</table>
+
+</div>
+</script>
+<script type="text/template" id="tpl-new-sms">
+<div class="new-message" id="<%=wid %>">
+<div class="new-message-bottom-mask"></div>
+<div style="margin-top:8px;display:inline-block;width: 100%;">
+    <span class="floatleft" style="margin:3px 9px 0 1px"><%=UsedLang._plain_text_newsms_receiver %>:</span>
+    <div class="inputbox floatleft" style="width: 340px;margin-left: 3px;margin-top: -2px;">
+        <input type="text" class="new-sms-receivers width100p" style="color:lightgray;" value=""></input>
+    </div>
+    <button class="new-message-btn-select-contacts btn_white75" style="border: 0;float: right;margin-top: -2px;"><%=UsedLang._button_mnewsms_select_contact  %></button>
+</div>
+
+<div class="new-sms-send-result width100p overflow-only-y" style="height:270px;border:0;margin-top:8px;margin-bottom:5px;background-color: white;outline:0;">
+
+</div>
+<div class="msg-list-l-patch"></div>
+<div class="msg-list-r-patch"></div>
+
+<div style="width: 484px;float: left;height: 63px;padding: 8px;position: relative;top: -3px;">
+<textarea class="new-sms-send-content" style="border: solid 1px #ACBDCF;width:98%;height:98%;"></textarea>
+</div>
+
+<button class="new-sms-send btn_blue62 disabled" style="border: 0;position: absolute;right: 6px;bottom: 5px;color:#5CA1E8;" disabled="disabled"><%=UsedLang._button_mnewsms_send  %></button>
+<div class="new-sms-counter floatright">0</div>
+<a style="text-align: center;display: inline-block;margin-left: 8px;color: gray;font-size:13px;margin-top: 4px;cursor:default;position: absolute;right: 70px;bottom: 10px;width: 100px;"><%=UsedLang._plain_text_mnewsms_send_tip  %></a>
+<button id="new-sms-clear-all" title="Clear All" class="trash-icon" style="display:none">&nbsp;</button>
+</div>
+</script>
+<script type="text/template" id="tpl-new-sms-contacts-selector">
+<div class="contacts-selector" id="<%=wid %>">
+    <div class="width100p" style="display:inline-block;margin-top:8px;">
+        <span style="display:inline-block;float: left;line-height: 24px;"><%=UsedLang._plain_text_mselectcontact_group  %></span>
+        <div class="contacts-groups-wrapper">
+            <select class="contacts-groups"><option value="-1"><%=UsedLang._plain_text_loading  %></option></select>
+        </div>
+        <div class="inputbox" style="float:right;margin-right:10px;width:145px;">
+            <input type="text" class="contacts-selector-filter"/>
+            <div style="position: absolute;right: 0;top: 0;background: transparent url(./ui/theme/default/images/until.png) no-repeat -29px -258px;width: 20px;height: 22px;"></div>
+        </div>
+        <span style="display:inline-block;float: right;line-height: 24px;margin-right: 3px;"><%=UsedLang._plain_text_mselectcontact_search  %></span>
+    </div>
+    <div class="all-calllog-titlebar-l-patcher" style="top: 39px;"></div>
+    <div class="all-calllog-titlebar-r-patcher" style="top: 39px;"></div>
+    <div class="contacts-titlebar width100p" style="display:inline-block;height:25px;margin-top:6px;border-top:solid 1px lightgray;border-bottom:solid 1px white;">        
+        <table class="width100p" style="line-height: 22px;height:22px;">
+            <tbody>
+                <tr>
+                    <td class="splitor" style="width: 22px;"><p class="checkbox contacts_selector_check_all" style="margin-top:5px;" checked="false"></p></td>
+                    <td class="splitor" style="width: 130px;text-indent: 10px;"><%=UsedLang._col_mselectcontact_name  %></td>
+                    <td class="splitor" style="width: 200px;text-indent: 10px;"><%=UsedLang._col_mselectcontact_phone  %></td>
+                    <td>&nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="contacts-container width100p overflow-only-y" style="height:184px">
+    
+    </div>
+    <hr/>
+    <div style="margin-top: 3px;float:left;width:481px;height:52px;">
+        <textarea class="contacts-selector-result" style="width:98%;height:98%;" readonly="readonly"></textarea>
+    </div>
+    <div style="display: inline-block;position: absolute;bottom: 9px;font-size: 13px;left: 2px;"><span class="contacts-selector-counter">0</span><%=UsedLang._plain_text_phone_selected  %></div>
+    <button class="contacts-selector-btn-ok btn_blue62 floatright" style="border:0;margin-right: 4px;position: absolute;right: -4px;bottom: 2px;"><%=UsedLang._button_mselectcontact_ok  %></button>
+    
+</div>
+</script>]]></sms>
+  <summary><![CDATA[  <div class="summary_top">
+    <div class="summary_top_l"></div>
+    <div class="summary_top_r"></div>
+    <div class="summary_top_c"></div>
+    <div class="summary_top__"></div>
+    <div class="summary_top_x"></div>
+  </div>
+  <div class="summary_container">
+    <div class="summary_container_l"></div>
+    <div class="summary_container_r"></div>
+    <div class="summary_container_c">
+      <img class="device_img" src="-%=hostAddress %-/sdctl/comm/device/photo/large.png" tppabs="http://192.168.119.101:8888/ui/template/<%=hostAddress %>/sdctl/comm/device/photo/large.png" />
+      <h3 class="device_name"><%=model %><em class="device_rom"><%=osversion %></em></h3>
+      <div class="nav">
+        <div class="nav_contacts nav_item"><a href="#"></a><div class="nav_dec"><div class="nav_name"><p class="nav_name_l"><%=UsedLang._plain_text_contacts %></p><p class="nav_name_r"></p></div><p class="nav_count"><%=counts.contacts %></p></div></div>
+        <div class="nav_messages nav_item"><a href="#"></a><div class="nav_dec"><div class="nav_name"><p class="nav_name_l"><%=UsedLang._plain_text_messages %></p><p class="nav_name_r"></p></div><p class="nav_count"><%=counts.sms %></p></div></div>
+        <div class="nav_apps nav_item"><a href="#"></a><div class="nav_dec"><div class="nav_name"><p class="nav_name_l"><%=UsedLang._plain_text_apps %></p><p class="nav_name_r"></p></div><p class="nav_count"><%=counts.app %></p></div></div>
+        <div class="nav_music nav_item"><a href="#"></a><div class="nav_dec"><div class="nav_name"><p class="nav_name_l"><%=UsedLang._plain_text_music %></p><p class="nav_name_r"></p></div><p class="nav_count"><%=counts.music %></p></div></div>
+        <div class="nav_video nav_item"><a href="#"></a><div class="nav_dec"><div class="nav_name"><p class="nav_name_l"><%=UsedLang._plain_text_video %></p><p class="nav_name_r"></p></div><p class="nav_count"><%=counts.video %></p></div></div>
+        <div class="nav_books nav_item"><a href="#"></a><div class="nav_dec"><div class="nav_name"><p class="nav_name_l"><%=UsedLang._plain_text_books %></p><p class="nav_name_r"></p></div><p class="nav_count"><%=counts.ebook %></p></div></div>
+        <div class="nav_photos nav_item"><a href="#"></a><div class="nav_dec"><div class="nav_name"><p class="nav_name_l"><%=UsedLang._plain_text_photo %></p><p class="nav_name_r"></p></div><p class="nav_count"><%=counts.photo %></p></div></div>
+      </div>
+      <div class="device_capacity">
+          <%=UsedLang._plain_text_capacity %> ( <%=UsedLang._plain_text_avail %> : <%=bytesToSize(size.sys_avail) %> )
+          <div class="device_capacity_p" style="margin-bottom:10px;">
+              <div class="device_capacity_p1" id="sys_c_used"></div>
+              <div class="device_capacity_p2" id="sys_c_avail"></div>
+              <div style="width: 100%;position: absolute;text-align: center;"><%=bytesToSize(size.sys_size - size.sys_avail) %> / <%=bytesToSize(size.sys_size) %></div>
+          </div>       
+          <span class="d_info_sd"><%=UsedLang._plain_text_sdcard %> ( <%=UsedLang._plain_text_avail %> : <%=bytesToSize(size.sd_avail) %> )</span>
+          <div class="device_capacity_p d_info_sd">
+            <div class="device_capacity_music" id="sd_c_music" style="z-index:6;"></div>
+            <div class="device_capacity_video" id="sd_c_video" style="z-index:5;"></div>
+            <div class="device_capacity_photo" id="sd_c_photo" style="z-index:4;"></div>
+            <div class="device_capacity_used" id="sd_c_used" style="z-index:3;"></div>
+            <div id="sd_c_avail"></div>
+            <div style="width: 100%;position: absolute;text-align: center;top:0;z-index:8"><%=bytesToSize(size.sd_size - size.sd_avail) %> / <%=bytesToSize(size.sd_size) %></div>
+          </div>
+          <div class="d_info_sd" style="margin-top: 8px;">
+              <span style="width: 60px; display: inline-block; cursor:pointer; " id="d_info_music"><div class="green-ball" style="top: 1px;margin-right: 4px;"></div><%=UsedLang._plain_text_music %></span>
+              <span style="width: 60px; display: inline-block; cursor:pointer; " id="d_info_video"><div class="pink-ball" style="top: 1px;margin-right: 4px;"></div><%=UsedLang._plain_text_video %></span>
+              <span style="width: 60px; display: inline-block; cursor:pointer; " id="d_info_photo"><div class="orange-ball" style="top: 1px;margin-right: 4px;"></div><%=UsedLang._plain_text_photo %></span>
+              <span style="width: 60px; display: inline-block; cursor:pointer; " id="d_info_other"><div class="gray-ball" style="top: 1px;margin-right: 4px;"></div><%=UsedLang._plain_text_other %></span>              
+          </div>
+          
+      </div>
+    </div>
+    <div class="summary_bottom">
+    <div class="summary_bottom_l"></div>
+    <div class="summary_bottom_r"></div>
+    <div class="summary_bottom_c"></div>
+  </div>]]></summary>
+  <support-browser><![CDATA[<div id="support_browser">
+  <div class="round_panel_top">    
+       <div class="round_panel_top_l"></div>
+        <div class="round_panel_top_r"></div>
+        <div class="round_panel_top_c"></div>
+  </div>
+  <div class="round_panel_container">
+    <div class="round_panel_container_l"></div>
+    <div class="round_panel_container_r"></div>
+    <div class="round_panel_container_c">
+        <div class="support_tip">
+            We keep improving AirDroid's performance on various browsers.<br /> 
+            For best results we highly recommend that you choose one of <br />
+            our recommended browsers(listed below).
+        </div>
+        <div class="support_browser_list">
+            <div class="browser">
+                <a class="browser_icon chrome"></a>
+                <a class="browser_name nav_name chrome_name" href="javascript:if(confirm('http://www.google.com/chrome  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.google.com/chrome'" tppabs="http://www.google.com/chrome" target="_blank"><p class="nav_name_l"> Chrome </p><p class="nav_name_r"></p></a>
+            </div>
+            <div class="browser">
+                <a class="browser_icon firefox" ></a>
+                <a class="browser_name nav_name firefox_name" href="javascript:if(confirm('http://www.mozilla.org/firefox/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.mozilla.org/firefox/'" tppabs="http://www.mozilla.org/firefox/" target="_blank"><p class="nav_name_l"> Firefox </p><p class="nav_name_r"></p></a>
+            </div>
+            <div class="browser">
+                <a class="browser_icon safari"></a>
+                <a class="browser_name nav_name safari_name" href="javascript:if(confirm('http://www.apple.com/safari/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.apple.com/safari/'" tppabs="http://www.apple.com/safari/" target="_blank"><p class="nav_name_l"> Safari </p><p class="nav_name_r"></p></a>
+            </div>
+        </div>
+        <div class="not_support_tip">
+            <span class="other_tip">Other browsers are less well supported.</span>
+            <span class="use_current">Login to AirDroid with current browser. >></span>
+        </div>
+    </div>
+  </div>
+  <div class="round_panel_bottom">
+    <div class="round_panel_bottom_l"></div>
+    <div class="round_panel_bottom_r"></div>
+    <div class="round_panel_bottom_c"></div>
+  </div>
+</div>]]></support-browser>
+  <task-item><![CDATA[ <div class="app_list_item" id="task_tr_<%=id %>">
+     <p class="checkbox"><input type="checkbox" name="mlcb" taskid="<%=id %>" click="return false;" /></p>
+     <div class="app_list_item_col_name">
+       <img class="app_list_item_icon" src="ui/theme/default/images/app-icon-default.png" tppabs="http://192.168.119.101:8888/ui/template/ui/theme/default/images/app-icon-default.png" />
+       <p class="app_list_item_name"><%=name %></p>
+       <p class="app_list_item_version">v<%=remark%></p>
+     </div>
+     <div class="app_list_item_col_size"><%print(Airdroid.TaskManage.fmt.size(total)); %></div>
+     <div class="app_list_item_col_state">
+       <div class="download_progress">
+         <div class="download_progress_ing"></div>
+         <div class="download_progress_v"></div>
+         <div class="download_speed"></div>
+       </div>
+     </div>
+     <div class="app_list_item_col_remain"></div>
+     <div class="app_list_item_col_command2"></div>
+</div>
+]]></task-item>
+  <taskmanage><![CDATA[ 
+  <div class="app_list_container">
+    <div class="app_list_top_c">
+      <p class="checkbox"  title="Select All"><input type="checkbox" name="mlcb" id="mlcb_all" class="checkbox_all" /><label style="margin-left:20px;width: 60px;display: inline-block;">Select All</label></p>
+      <div class="command">
+         <a class="btn_blue120" id="removeInstalled" href="#">Remove Installed</a><a class="btn_white65" id="deleteSelect" href="#">Delete</a>
+      </div>
+    </div>
+    <div class="app_list_container_c" >
+        <div id="task_list_view">
+        </div>
+    </div>
+  </div>
+  
+
+]]></taskmanage>
+  <tips><![CDATA[<div id="clew_light">
+    <div class="clew_v" style="top:<%=imgTop %>px; right:<%=imgRight %>px;">
+    <a class="close"></a>
+    <img src="ui/theme/default/images/clew_-%=tipType %-.png" tppabs="http://192.168.119.101:8888/ui/template/ui/theme/default/images/clew_<%=tipType %>.png" />
+    </div>
+    <div class="shade">
+    <div class="l" style="width:<%=leftWidth %>px"></div>
+    <div class="c" style="left:<%=leftWidth %>px; width:<%=targetWidth %>px;">
+    <div class="c_t" style="height:<%=targetTop %>px;"></div>
+    <div class="c_m" style="height:<%=targetHeight %>px;">
+    <div class="c_m_l_t"></div>
+    <div class="c_m_l_b"></div>
+    <div class="c_m_r_t"></div>
+    <div class="c_m_r_b"></div>
+</div>
+<div class="c_b" style=""></div>
+</div>
+<div class="r" style="width:<%=rightWidth %>px"></div>
+</div>]]></tips>
+  <window><![CDATA[<div class="window" id="w_<%=content_id %>" max="false">
+    <table class="window-wrapper">
+        <tbody>
+            <tr class="window-titlebar">
+                <td class="window-title-l">
+                    &nbsp;
+                </td>
+                <td class="window-title-c">
+                    <table class="width100p">
+                        <tr>
+                            <td class="window-drag-handle">
+                                <div style="float: left;">
+                                    <img valign="middle" class="window-icon"><span class="window-title">Unnamed</span>
+                                </div>
+                            </td>
+                            <td style="width:64px;">
+                                <div class="window-x">
+                                </div>
+                                <div class="window-o">
+                                </div>
+                                <div class="window-_">
+                                </div>
+                            </td>
+                        </tr>                        
+                    </table>
+
+
+                </td>
+                <td class="window-title-r">
+                    &nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td class="window-body-l">
+                </td>
+                <td class="window-body-c" valign="top">
+                </td>
+                <td class="window-body-r window-resize-e ui-resizable-handle ui-resizable-e">
+                </td>
+            </tr>
+            <tr class="window-bottom">
+                <td class="window-bottom-l">
+                    &nbsp;
+                </td>
+                <td class="window-bottom-c window-resize-s ui-resizable-handle ui-resizable-s">
+                    &nbsp;
+                </td>
+                <td class="window-bottom-r window-resize-se ui-resizable-handle ui-resizable-se">
+                    &nbsp;
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>]]></window>
+  <workspace><![CDATA[<div id="taskbar" style="z-index:999;display:none;">	 
+    <!--<div id="taskbar_menu" class="startmenu"></div>
+    <a id="newVersionIcon" class="new_version_icon"></a>-->
+    <div id="taskbar_wifi" class="wifi"></div>
+    <div id="taskbar_signal" class="signal0"></div>
+    <div id="taskbar_battery"><div id="taskbar_battery_v">0%</div><div id="taskbar_battery_vbg" style="width:0px;"></div></div>
+        <div id="taskbar_content">
+
+    </div>
+</div>
+
+<div id="main_container" style="display:none;">
+    <div id="summary" class="window" style="display: none">
+    </div>
+    <div id="applications" style="display: none;">
+    </div>
+
+     <div id="webbrowser" style="display: none;">
+    </div>
+    <div id="taskmanage" style="display: none;">
+    </div>
+    <div id="filemanage" style="display: none">
+    </div>
+     <div id="photo" style="display: none">
+    </div>
+    <div id="music" style="display: none">
+    </div>
+    <div id="ringtone" style="display: none">
+    </div>
+    <div id="shortcut_bar">
+        <div class="shortcut_bar_top"></div>
+        <div class="shortcut_bar_center">
+            <div class="shurtcut_icon_wrap" style="margin-top:0px;">
+                <div menu="new_sms" class="shurtcut_icon new_sms" title="<%=UsedLang._tip_shortcut_icon_new_sms %>"></div>
+            </div>
+            <div class="shurtcut_icon_wrap">
+                <div menu="new_contact" class="shurtcut_icon new_contect" title="<%=UsedLang._tip_shortcut_icon_new_contact %>"></div>
+            </div>
+             <div class="shurtcut_icon_wrap">
+                <div menu="show_desktop" class="shurtcut_icon show_desktop" title="<%=UsedLang._tip_shortcut_icon_show_desktop %>"></div>
+            </div>
+            
+            <div class="shurtcut_icon_wrap">
+                <div menu="log_off" class="shurtcut_icon log_off" title="<%=UsedLang._tip_shortcut_icon_log_off%>"></div>
+            </div>
+             <div class="shurtcut_icon_wrap">
+                <div menu="more_menu" class="shurtcut_icon more_menu" title="<%=UsedLang._tip_shortcut_icon_more_menu %>"></div>
+            </div>
+            
+             <div id="more_menu_opration" style="display:none;">
+                <a menu="lock_sys" class="more_menu_opration" style="margin-top:13px;"><%=UsedLang._more_menu_lock%></a>
+                <a menu="add_to_favi" class="more_menu_opration"><%=UsedLang._more_menu_add_to_favi%></a>
+                <a menu="blog" class="more_menu_opration"><%=UsedLang._more_menu_blog%></a>
+                <a menu="facebook" class="more_menu_opration"><%=UsedLang._more_menu_facebook%></a>
+                <a menu="twitter" class="more_menu_opration"><%=UsedLang._more_menu_twitter%></a>
+                <a menu="help_doc" class="more_menu_opration"><%=UsedLang._more_menu_help%></a>
+                <a menu="about_us" class="more_menu_opration" id="inner_about_us"><%=UsedLang._more_menu_about_us%><span id="newVersionIcon" class="new_version_icon"></span></a>
+            </div>
+                 
+        </div>
+        <div class="shortcut_bar_bottom"></div>   
+    </div>
+     
+   
+    <div id="pagelet_search_bar">
+        <div class="pagelet_market" > <img width="25px" height="25px" src="ui/theme/default/images/google.png" tppabs="http://192.168.119.101:8888/ui/template/ui/theme/default/images/google.png" /></div>
+        <input id="pagelet_search_input" value="Search apps..." />
+        <a class="pagelet_search_buttom" ></a>
+        
+        <div id="appmarket_list_wrap">
+            <div menu="google" class="appmarket_list_item"><img width="25px" height="25px" src="ui/theme/default/images/google.png" tppabs="http://192.168.119.101:8888/ui/template/ui/theme/default/images/google.png" /><div class="appmarket_name">Android Market</div></div>
+            
+       </div>
+    </div>
+    <div id="musicPlayerWidget" style="display:none;">
+        <a href="javascript:;" class="min_icon"/>
+        <a href="javascript:;" class="close_icon" />
+        <div id="audio_player" class="jp-jplayer"></div>
+
+		<div id="audio_player_container" class="jp-audio">
+			<div class="jp-type-single">
+				<div class="jp-gui jp-interface">
+					<ul class="jp-controls">
+					    <li><a href="javascript:;" class="jp-prev" tabindex="1"><%=UsedLang._player_prev %></a></li>
+						<li><a href="javascript:;" class="jp-play" tabindex="1"><%=UsedLang._player_play %></a></li>
+						<li><a href="javascript:;" class="jp-pause" tabindex="1"><%=UsedLang._player_pause %></a></li>
+						<li><a href="javascript:;" class="jp-next" tabindex="1"><%=UsedLang._player_next %></a></li>
+						<li><a href="javascript:;" class="jp-mute" tabindex="1" title="<%=UsedLang._player_mute %>"><%=UsedLang._player_mute %></a></li>
+						<li><a href="javascript:;" class="jp-unmute" tabindex="1" title="<%=UsedLang._player_unmute %>"><%=UsedLang._player_unmute %></a></li>
+					</ul>
+					<div class="jp-progress">
+						<div class="jp-seek-bar">
+							<div class="jp-play-bar"></div>
+						</div>
+					</div>
+					<div class="jp-volume-bar">
+						<div class="jp-volume-bar-value"></div>
+					</div>
+					<div class="jp-play-type">
+					    <a class="flow" title="<%=UsedLang._play_type_loop_off %>"></a>
+					    
+					</div>
+					<div class="jp-time-holder">
+						<div class="jp-duration"></div>
+						<div class="jp-time-seprate">/</div>
+						<div class="jp-current-time"></div>
+					</div>
+					<div class="jp-title">
+						<marquee width="225" direction="left" scrollDelay="120" align="left" onMouseOut="this.start()" onMouseOver="this.stop()" style="dispaly:none;"><span class="scroll_span"></span></marquee>
+						<span class="no_scroll_span" style="dispaly:none;"></span>
+					</div>
+				</div>
+				<div class="jp-no-solution">
+					<span><%=UsedLang._player_need_update_title %></span>
+					<%=UsedLang._player_need_update_desc %>
+				</div>
+			</div>
+		</div>
+    </div>
+    <div id="play_type" style="position: absolute; left: 691px; top: 0px;display:none;">
+        <div class="play_type_top"></div>
+        <div class="play_type_body">
+            <a class="play_type_item" type="single_circle"><%=UsedLang._play_type_repeat_one %></a>
+            <a class="play_type_item" type="flow"><%=UsedLang._play_type_loop_off %></a>
+            <a class="play_type_item" type="flow_circle"><%=UsedLang._play_type_loop_on %></a>
+        </div>
+        <div class="play_type_bottom"></div>
+    </div>
+   
+    <div id="summaryWidget">
+        <img id="summaryWidgetPhone" src="-%=hostAddress %-/sdctl/comm/device/photo/small.png" tppabs="http://192.168.119.101:8888/ui/template/<%=hostAddress %>/sdctl/comm/device/photo/small.png" />
+        <div id="summaryWidgetPhoneName">
+            Android</div>
+        <div id="summaryWidgetPhoneOS">
+            Android OS</div>
+        <div id="summaryWidgetPhoneMem">
+            <div id="summaryWidget_sys_c_used">
+                &nbsp;</div>
+            <div id="summaryWidget_sys_c_avail">
+                &nbsp;</div>
+            <div id="summaryWidget_sys_info" title="Internal Storage"></div>
+        </div>
+        <div id="summaryWidgetPhoneSD">
+            <div id="summaryWidget_sd_c_used">&nbsp;
+            </div>
+            <div id="summaryWidget_sd_c_avail">&nbsp;
+            </div>
+            <div id="summaryWidget_sd_info" title="SD Card"></div>
+        </div>
+        <div id="summaryWidgetDetail">
+            <span style="display:inline-block;line-height:20px;"><%=UsedLang._summary_widget_detail %></span></div>
+    </div>
+        <a class="abs icon destopicon" style="top: 30px; left: 240px; z-index: 2;" href="#smslist">
+        <img src="ui/theme/default/images/icon_messages_80.png" tppabs="http://192.168.119.101:8888/ui/template/ui/theme/default/images/icon_messages_80.png">
+        <span style="display: block; margin-top: -8px;"><%=UsedLang._module_name_smslist %></span>
+        <div id="desktopicon-sms-count" class="hide">0</div>
+    </a>
+    <a class="abs icon destopicon" style="top: 30px; left: 120px; z-index: 2;" href="#applications">
+        <img src="ui/theme/default/images/icon_app_80.png" tppabs="http://192.168.119.101:8888/ui/template/ui/theme/default/images/icon_app_80.png">
+        <span style="display: block; margin-top: -8px;"><%=UsedLang._module_name_applications %></span> </a>
+    <a class="abs icon destopicon" style="top: 150px; left: 120px; z-index: 2;" href="#filemanage">
+        <img src="ui/theme/default/images/icon_file_80.png" tppabs="http://192.168.119.101:8888/ui/template/ui/theme/default/images/icon_file_80.png">
+        <span style="display: block; margin-top: -8px;"><%=UsedLang._module_name_filemanage %></span> </a>
+    <a class="abs icon destopicon" style="top: 270px; left: 120px; z-index: 2;" href="#appmarket">
+        <img src="ui/theme/default/images/icon_market_80.png" tppabs="http://192.168.119.101:8888/ui/template/ui/theme/default/images/icon_market_80.png">
+        <span style="display: block; margin-top: -8px;"><%=UsedLang._module_name_market %></span> </a>
+     <a class="abs icon destopicon" style="top: 390px; left: 120px; z-index: 2;" href="#photo">
+        <img src="ui/theme/default/images/icon_photo_80.png" tppabs="http://192.168.119.101:8888/ui/template/ui/theme/default/images/icon_photo_80.png">
+        <span style="display: block; margin-top: -8px;"><%=UsedLang._module_name_photo %></span> </a>
+    <a class="abs icon destopicon" style="top: 510px; left: 120px; z-index: 2;" href="#music">
+        <img src="ui/theme/default/images/icon_music_80.png" tppabs="http://192.168.119.101:8888/ui/template/ui/theme/default/images/icon_music_80.png">
+        <span style="display: block; margin-top: -8px;"><%=UsedLang._module_name_music %></span> </a>
+        
+    <a class="abs icon destopicon" style="top: 270px; left: 240px; z-index: 2;" href="#ringtone">
+        <img src="ui/theme/default/images/icon_ringtone_80.png" tppabs="http://192.168.119.101:8888/ui/template/ui/theme/default/images/icon_ringtone_80.png">
+        <span style="display: block; margin-top: -8px;"><%=UsedLang._module_name_ringtone %></span> </a>
+        
+
+    <a class="abs icon destopicon" style="top: 150px; left: 240px; z-index: 2;" href="#contacts">
+        <img src="ui/theme/default/images/icon_contacts_80.png" tppabs="http://192.168.119.101:8888/ui/template/ui/theme/default/images/icon_contacts_80.png">
+        <span style="display: block; margin-top: -8px;"><%=UsedLang._module_name_contacts %></span> </a>
+
+    <a class="abs icon destopicon" style="top: 150px; left: 240px; z-index: 2;" href="#calllog">
+        <img src="ui/theme/default/images/icon_phone_80.png" tppabs="http://192.168.119.101:8888/ui/template/ui/theme/default/images/icon_phone_80.png">
+        <span style="display: block; margin-top: -8px;"><%=UsedLang._module_name_calllog %></span> </a>
+        
+    <a class="abs icon destopicon" style="top: 150px; left: 240px; z-index: 2;" href="#clipboard">
+        <img src="ui/theme/default/images/icon_clipboard_80.png" tppabs="http://192.168.119.101:8888/ui/template/ui/theme/default/images/icon_clipboard_80.png">
+        <span style="display: block; margin-top: -8px;"><%=UsedLang._module_name_clipboard %></span> </a>
+        
+    <div class="noticeWidget" style="z-index:2;width:auto;">
+        <div class="noticeWidget-clear" title="<%=UsedLang._tip_clear_all_notice %>"></div>
+        <table class="noticeWidget-wrapper">
+            <tbody>
+                <tr class="noticeWidget-titlebar">
+                    <td class="noticeWidget-title-l">
+                        &nbsp;
+                    </td>
+                    <td class="noticeWidget-title-c">
+                        &nbsp;
+                    </td>
+                    <td class="noticeWidget-title-r">
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td class="noticeWidget-body-l">
+                    </td>
+                    <td class="noticeWidget-body-c">
+                    </td>
+                    <td class="noticeWidget-body-r">
+                    </td>
+                </tr>
+                <tr class="noticeWidget-bottom">
+                    <td class="noticeWidget-bottom-l">
+                        &nbsp;
+                    </td>
+                    <td class="noticeWidget-bottom-c">
+                        &nbsp;
+                    </td>
+                    <td class="noticeWidget-bottom-r">
+                        &nbsp;
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="specialNoticeLowBat20" style="width: auto; display: none; z-index: 99999;color:White">
+        <div class="specialNoticeLowBat20-clear"></div>
+        <table class="specialNoticeLowBat20-wrapper">
+            <tbody>
+                <tr class="noticeWidgetSP-titlebar">
+                    <td class="noticeWidgetSP-title-l">
+                        &nbsp;
+                    </td>
+                    <td class="noticeWidgetSP-title-c">
+                        &nbsp;
+                    </td>
+                    <td class="noticeWidgetSP-title-r">
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td class="noticeWidgetSP-body-l">
+                    </td>
+                    <td class="noticeWidgetSP-body-c">
+                        <div style="width: 280px;cursor:default;">
+                            <div style="float: left; width: 100%;">
+                                <div style="float: left;">
+                                <span style="background: transparent url(ui/theme/default/images/until.png)/*tpa=http://192.168.119.101:8888/ui/template/ui/theme/default/images/until.png*/ no-repeat -145px -354px;width: 50px;height: 50px;float: left;"> </span></div>
+                                <div style="float: left;font-size: 18px;margin-left: 12px;margin-top: 12px;">Please connect charger</div>
+                            </div>
+                            <div style="float: left;width: 100%;overflow: hidden;height: 9px;"><img style="width:100%;height: 1px;" src="ui/theme/default/images/separate_line.png" tppabs="http://192.168.119.101:8888/ui/template/ui/theme/default/images/separate_line.png">&nbsp;</div>
+                            <div style="font-size: 17px;float: left;width: 100%;"><div style="width: 100%;float: left;text-indent: 24px;cursor:default;">The battery is getting low:<span style="color: #F68005;font-size: 19px;text-indent: 5px;display: inline-block;">20%</span></div><div style="float: left;width: 100%;text-indent: 24px;padding-bottom: 6px;cursor:default;"> or less remaining.</div></div>
+                        </div>
+                    </td>
+                    <td class="noticeWidgetSP-body-r">
+                    </td>
+                </tr>
+                <tr class="noticeWidgetSP-bottom">
+                    <td class="noticeWidgetSP-bottom-l">
+                        &nbsp;
+                    </td>
+                    <td class="noticeWidgetSP-bottom-c">
+                        &nbsp;
+                    </td>
+                    <td class="noticeWidgetSP-bottom-r">
+                        &nbsp;
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="specialNoticeLowBat5" style="width: auto; display: none; z-index: 99999;color:White">
+        <div class="specialNoticeLowBat5-clear"></div>
+        <table class="specialNoticeLowBat5-wrapper">
+            <tbody>
+                <tr class="noticeWidgetSP-titlebar">
+                    <td class="noticeWidgetSP-title-l">
+                        &nbsp;
+                    </td>
+                    <td class="noticeWidgetSP-title-c">
+                        &nbsp;
+                    </td>
+                    <td class="noticeWidgetSP-title-r">
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td class="noticeWidgetSP-body-l">
+                    </td>
+                    <td class="noticeWidgetSP-body-c">
+                        <div style="width: 280px;">
+                            <div style="float: left; width: 100%;cursor:default;">
+                                <div style="float: left;">
+                                <span style="background: transparent url(ui/theme/default/images/until.png)/*tpa=http://192.168.119.101:8888/ui/template/ui/theme/default/images/until.png*/ no-repeat -145px -354px;width: 50px;height: 50px;float: left;"> </span></div>
+                                <div style="float: left;font-size: 18px;margin-left: 12px;margin-top: 12px;">Please connect charger</div>
+                            </div>
+                            <div style="float: left;width: 100%;overflow: hidden;height: 9px;"><img style="width:100%;height: 1px;" src="ui/theme/default/images/separate_line.png" tppabs="http://192.168.119.101:8888/ui/template/ui/theme/default/images/separate_line.png">&nbsp;</div>
+                            <div style="font-size: 17px;float: left;width: 100%;"><div style="width: 100%;float: left;text-indent: 24px;cursor:default;">The battery is getting low:<span style="color: #F68005;font-size: 19px;text-indent: 5px;display: inline-block;">5%</span></div><div style="float: left;width: 100%;text-indent: 24px;padding-bottom: 6px;cursor:default;"> or less remaining.</div></div>
+                        </div>
+                    </td>
+                    <td class="noticeWidgetSP-body-r">
+                    </td>
+                </tr>
+                <tr class="noticeWidgetSP-bottom">
+                    <td class="noticeWidgetSP-bottom-l">
+                        &nbsp;
+                    </td>
+                    <td class="noticeWidgetSP-bottom-c">
+                        &nbsp;
+                    </td>
+                    <td class="noticeWidgetSP-bottom-r">
+                        &nbsp;
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <div id="mask_tip_sample" class="mask_tip" style="display:none">Delete Suc!</div>
+</div>
+
+<iframe id="downloadFrame" style="display:none" width="0" height="0" />
+<div id='tbSocket' style="display: none" />]]></workspace>
+</htmlfragments>
